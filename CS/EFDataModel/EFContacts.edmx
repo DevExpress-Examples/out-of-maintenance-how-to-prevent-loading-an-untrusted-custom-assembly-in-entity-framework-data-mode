@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ContactsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\GALLERY\WHATSNEW16.1\SNAP\EFDATATEST\EFDATAMODEL\CONTACTS.MDF.dbo.Customers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\GALLERY\WHATSNEW16.1\SNAP\EFDATATEST\EFDATAMODEL\CONTACTS.MDF.dbo.Total' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Total">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="Year" Type="smallint" />
+          <Property Name="January" Type="float" />
+          <Property Name="February" Type="float" />
+          <Property Name="March" Type="float" />
+          <Property Name="April" Type="float" />
+          <Property Name="May" Type="float" />
+          <Property Name="June" Type="float" />
+          <Property Name="July" Type="float" />
+          <Property Name="August" Type="float" />
+          <Property Name="September" Type="float" />
+          <Property Name="October" Type="float" />
+          <Property Name="November" Type="float" />
+          <Property Name="December" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\GALLERY\WHATSNEW16.1\SNAP\EFDATATEST\EFDATAMODEL\CONTACTS.MDF.dbo.CustomersPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CustomersPayment">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Customer Name" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Customer Name" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="Year" Type="smallint" />
+          <Property Name="January" Type="float" />
+          <Property Name="February" Type="float" />
+          <Property Name="March" Type="float" />
+          <Property Name="April" Type="float" />
+          <Property Name="May" Type="float" />
+          <Property Name="June" Type="float" />
+          <Property Name="July" Type="float" />
+          <Property Name="August" Type="float" />
+          <Property Name="September" Type="float" />
+          <Property Name="October" Type="float" />
+          <Property Name="November" Type="float" />
+          <Property Name="December" Type="float" />
+        </EntityType>
+        <EntityContainer Name="ContactsModelStoreContainer">
+          <EntitySet Name="Customers" EntityType="Self.Customers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Customers].[ID] AS [ID], 
+    [Customers].[FirstName] AS [FirstName], 
+    [Customers].[LastName] AS [LastName], 
+    [Customers].[Company] AS [Company], 
+    [Customers].[Address] AS [Address], 
+    [Customers].[City] AS [City], 
+    [Customers].[State] AS [State], 
+    [Customers].[ZipCode] AS [ZipCode], 
+    [Customers].[HomePhone] AS [HomePhone]
+    FROM [dbo].[Customers] AS [Customers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Total" EntityType="Self.Total" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Total].[ID] AS [ID], 
+    [Total].[CustomerID] AS [CustomerID], 
+    [Total].[Year] AS [Year], 
+    [Total].[January] AS [January], 
+    [Total].[February] AS [February], 
+    [Total].[March] AS [March], 
+    [Total].[April] AS [April], 
+    [Total].[May] AS [May], 
+    [Total].[June] AS [June], 
+    [Total].[July] AS [July], 
+    [Total].[August] AS [August], 
+    [Total].[September] AS [September], 
+    [Total].[October] AS [October], 
+    [Total].[November] AS [November], 
+    [Total].[December] AS [December]
+    FROM [dbo].[Total] AS [Total]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CustomersPayment" EntityType="Self.CustomersPayment" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CustomersPayment].[ID] AS [ID], 
+    [CustomersPayment].[Customer Name] AS [Customer Name], 
+    [CustomersPayment].[Year] AS [Year], 
+    [CustomersPayment].[January] AS [January], 
+    [CustomersPayment].[February] AS [February], 
+    [CustomersPayment].[March] AS [March], 
+    [CustomersPayment].[April] AS [April], 
+    [CustomersPayment].[May] AS [May], 
+    [CustomersPayment].[June] AS [June], 
+    [CustomersPayment].[July] AS [July], 
+    [CustomersPayment].[August] AS [August], 
+    [CustomersPayment].[September] AS [September], 
+    [CustomersPayment].[October] AS [October], 
+    [CustomersPayment].[November] AS [November], 
+    [CustomersPayment].[December] AS [December]
+    FROM [dbo].[CustomersPayment] AS [CustomersPayment]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ContactsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Total">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="Year" Type="Int16" />
+          <Property Name="January" Type="Double" />
+          <Property Name="February" Type="Double" />
+          <Property Name="March" Type="Double" />
+          <Property Name="April" Type="Double" />
+          <Property Name="May" Type="Double" />
+          <Property Name="June" Type="Double" />
+          <Property Name="July" Type="Double" />
+          <Property Name="August" Type="Double" />
+          <Property Name="September" Type="Double" />
+          <Property Name="October" Type="Double" />
+          <Property Name="November" Type="Double" />
+          <Property Name="December" Type="Double" />
+        </EntityType>
+        <EntityType Name="CustomersPayment">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Customer_Name" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Customer_Name" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Year" Type="Int16" />
+          <Property Name="January" Type="Double" />
+          <Property Name="February" Type="Double" />
+          <Property Name="March" Type="Double" />
+          <Property Name="April" Type="Double" />
+          <Property Name="May" Type="Double" />
+          <Property Name="June" Type="Double" />
+          <Property Name="July" Type="Double" />
+          <Property Name="August" Type="Double" />
+          <Property Name="September" Type="Double" />
+          <Property Name="October" Type="Double" />
+          <Property Name="November" Type="Double" />
+          <Property Name="December" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="ContactsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Totals" EntityType="Self.Total" />
+          <EntitySet Name="CustomersPayments" EntityType="Self.CustomersPayment" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ContactsModelStoreContainer" CdmEntityContainer="ContactsEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="ContactsModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Totals">
+            <EntityTypeMapping TypeName="ContactsModel.Total">
+              <MappingFragment StoreEntitySet="Total">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="January" ColumnName="January" />
+                <ScalarProperty Name="February" ColumnName="February" />
+                <ScalarProperty Name="March" ColumnName="March" />
+                <ScalarProperty Name="April" ColumnName="April" />
+                <ScalarProperty Name="May" ColumnName="May" />
+                <ScalarProperty Name="June" ColumnName="June" />
+                <ScalarProperty Name="July" ColumnName="July" />
+                <ScalarProperty Name="August" ColumnName="August" />
+                <ScalarProperty Name="September" ColumnName="September" />
+                <ScalarProperty Name="October" ColumnName="October" />
+                <ScalarProperty Name="November" ColumnName="November" />
+                <ScalarProperty Name="December" ColumnName="December" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomersPayments">
+            <EntityTypeMapping TypeName="ContactsModel.CustomersPayment">
+              <MappingFragment StoreEntitySet="CustomersPayment">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer Name" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="January" ColumnName="January" />
+                <ScalarProperty Name="February" ColumnName="February" />
+                <ScalarProperty Name="March" ColumnName="March" />
+                <ScalarProperty Name="April" ColumnName="April" />
+                <ScalarProperty Name="May" ColumnName="May" />
+                <ScalarProperty Name="June" ColumnName="June" />
+                <ScalarProperty Name="July" ColumnName="July" />
+                <ScalarProperty Name="August" ColumnName="August" />
+                <ScalarProperty Name="September" ColumnName="September" />
+                <ScalarProperty Name="October" ColumnName="October" />
+                <ScalarProperty Name="November" ColumnName="November" />
+                <ScalarProperty Name="December" ColumnName="December" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
