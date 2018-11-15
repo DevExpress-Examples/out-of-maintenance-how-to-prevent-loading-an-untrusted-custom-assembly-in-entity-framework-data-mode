@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/MailMergeEFData/Form1.cs) (VB: [Form1.vb](./VB/MailMergeEFData/Form1.vb))
+<!-- default file list end -->
 # How to prevent loading an untrusted custom assembly in Entity Framework data model
 
 
