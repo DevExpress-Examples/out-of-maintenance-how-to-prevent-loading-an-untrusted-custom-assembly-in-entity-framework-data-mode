@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -6,7 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{624788ED-CD3E-4C23-B2FE-452EAC37D8D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>MailMergeEFData</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,30 +53,36 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v16.2.Core" />
-    <Reference Include="DevExpress.Data.v16.2" />
-    <Reference Include="DevExpress.DataAccess.v16.2" />
-    <Reference Include="DevExpress.DataAccess.v16.2.UI" />
-    <Reference Include="DevExpress.Office.v16.2.Core" />
-    <Reference Include="DevExpress.Printing.v16.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v16.2.Core" />
-    <Reference Include="DevExpress.Spreadsheet.v16.2.Core" />
-    <Reference Include="DevExpress.Utils.v16.2" />
-    <Reference Include="DevExpress.Utils.v16.2.UI" />
-    <Reference Include="DevExpress.XtraBars.v16.2" />
-    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard" />
-    <Reference Include="DevExpress.XtraCharts.v16.2" />
-    <Reference Include="DevExpress.XtraEditors.v16.2" />
-    <Reference Include="DevExpress.XtraGrid.v16.2" />
-    <Reference Include="DevExpress.XtraLayout.v16.2" />
-    <Reference Include="DevExpress.XtraNavBar.v16.2" />
-    <Reference Include="DevExpress.XtraPrinting.v16.2" />
-    <Reference Include="DevExpress.XtraRichEdit.v16.2" />
-    <Reference Include="DevExpress.XtraSpreadsheet.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v23.1, Version=23.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v23.1.Core" />
+    <Reference Include="DevExpress.Drawing.v23.1" />
+    <Reference Include="DevExpress.Data.v23.1" />
+    <Reference Include="DevExpress.DataAccess.v23.1" />
+    <Reference Include="DevExpress.DataAccess.v23.1.UI" />
+    <Reference Include="DevExpress.Office.v23.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Export" />
+    <Reference Include="DevExpress.Printing.v23.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Core" />
+    <Reference Include="DevExpress.DataVisualization.v23.1.Core" />
+    <Reference Include="DevExpress.Spreadsheet.v23.1.Core" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1" />
+    <Reference Include="DevExpress.Utils.v23.1" />
+    <Reference Include="DevExpress.Utils.v23.1.UI" />
+    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v23.1" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard" />
+    <Reference Include="DevExpress.XtraCharts.v23.1" />
+    <Reference Include="DevExpress.XtraEditors.v23.1" />
+    <Reference Include="DevExpress.XtraGrid.v23.1" />
+    <Reference Include="DevExpress.XtraLayout.v23.1" />
+    <Reference Include="DevExpress.XtraNavBar.v23.1" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1" />
+    <Reference Include="DevExpress.Images.v23.1" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.1" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v23.1, Version=23.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v16.2" />
+    <Reference Include="DevExpress.XtraTreeList.v23.1" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
